@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO BÁSICO E PALAVRAS-CHAVE (Otimizado para o Google) -->
+  <title>Bruno Camargo Manso — Psicólogo Clínico Online | Psicoterapia</title>
+  <meta name="description"
+    content="Psicoterapia online com o psicólogo clínico Bruno Camargo Manso (CRP 09/004628). Espaço seguro, calmo e acolhedor de orientação psicanalítica e existencial para adultos.">
+  <meta name="keywords"
+    content="Bruno Camargo Manso, Psicologo online, psicoterapia online, psicanalise, terapia de luto, burnout, ansiedade, depressao, traumas, autoconhecimento, Goiania, Goiás">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://brunocamargomanso.com.br">
+
+  <!-- MARCAÇÃO OPEN GRAPH (Para quando partilhares o link no WhatsApp, o card aparecer bonito) -->
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bruno Camargo Manso — Psicólogo Clínico Online">
+  <meta property="og:description"
+    content="Um convite à escuta atenta do sofrimento e das singularidades através de um espaço terapêutico seguro, acolhedor e totalmente confidencial.">
+  <meta property="og:url" content="https://brunocamargomanso.com.br">
+  <meta property="og:site_name" content="Bruno Camargo Manso Psicologia">
+  <meta property="og:image" content="https://brunocamargomanso.com.br/assets/foto-partilha.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons para os ícones das plataformas e contactos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          colors: {
+            stone: {
+              50: '#fcfbfa',
+              100: '#f5f3f0',
+              200: '#e8e5e0',
+              300: '#d6d1ca',
+              400: '#b8b0a5',
+              500: '#968c7f',
+              600: '#7c7164',
+              700: '#645a4f',
+              800: '#4d453d',
+              900: '#38322d',
+              950: '#211d1a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos para animações de revelação suave (Scroll Reveal) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Delays de animação para efeito stagger */
+    .delay-100 {
+      transition-delay: 100ms;
+    }
+
+    .delay-200 {
+      transition-delay: 200ms;
+    }
+
+    .delay-300 {
+      transition-delay: 300ms;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden">
+
+  <!-- BARRA DE NAVEGAÇÃO -->
+  <header
+    class="sticky top-0 z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/40 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex flex-col">
+        <span class="font-medium tracking-tight text-lg text-stone-900 leading-tight">Bruno Camargo Manso</span>
+        <span class="text-[10px] text-stone-500 tracking-widest uppercase mt-0.5">Psicólogo Clínico &bull; CRP
+          09/004628</span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-stone-600">
+        <a href="#sobre" class="hover:text-stone-900 transition-colors">Sobre</a>
+        <a href="#especialidades" class="hover:text-stone-900 transition-colors">Especialidades</a>
+        <a href="#atendimento" class="hover:text-stone-900 transition-colors">O Setting</a>
+        <a href="#faq" class="hover:text-stone-900 transition-colors">Dúvidas</a>
+        <a href="#modalidades" class="hover:text-stone-900 transition-colors">Consultas</a>
+      </nav>
+
+      <div>
+        <a href="https://wa.me/556298534925" target="_blank"
+          class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-medium tracking-widest uppercase border border-stone-800 hover:bg-stone-900 hover:text-white transition-all duration-300 rounded-none">
+          Agendar Consulta
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BLOCO 1: APRESENTAÇÃO HERO -->
+  <section
+    class="relative w-full overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-orange-50/40 border-b border-stone-200/40">
+    <!-- Elemento decorativo de luz e cor no fundo -->
+    <div class="absolute top-1/4 right-0 w-80 h-80 bg-orange-100/30 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute bottom-10 left-10 w-60 h-60 bg-stone-200/20 rounded-full blur-2xl -z-10"></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-12 gap-12 items-center min-h-[80vh]">
+
+      <!-- Textos (Coluna Esquerda) -->
+      <div class="md:col-span-7 space-y-6 reveal active">
+        <p class="text-xs font-bold tracking-widest uppercase text-stone-500">Psicologia Clínica de Orientação
+          Psicanalítica</p>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-stone-950 leading-[1.15] font-serif">
+          Não somos apenas o que o mundo fez de nós, mas o espaço que descobrimos para <span
+            class="italic font-normal text-stone-800">inventar a nós mesmos</span>.
+        </h1>
+        <p class="text-stone-600 text-lg md:text-xl font-light max-w-xl leading-relaxed">
+          Um convite à escuta atenta do sofrimento e das singularidades através de um percurso analítico e existencial
+          adaptado à vida contemporânea.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a href="https://wa.me/556298534925" target="_blank"
+            class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white text-sm font-medium tracking-wider uppercase hover:bg-stone-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <i class="bi bi-whatsapp mr-2"></i> Iniciar Atendimento
+          </a>
+          <a href="#sobre"
+            class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 bg-white/60 hover:bg-white text-sm font-medium tracking-wider uppercase transition-all duration-300">
+            Saber mais sobre a prática
+          </a>
+        </div>
+      </div>
+
+      <!-- Arte Fluida/Equilíbrio (Coluna Direita) -->
+
+      <div class="hidden md:block md:col-span-5 aspect-[4/5] relative overflow-hidden shadow-sm reveal group">
+        <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
+          <span><img src="assets/turner-ai.png" alt="Bruno Camargo Manso"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 2: SOBRE MIM -->
+  <section id="sobre" class="border-t border-stone-200 bg-stone-100/50 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+      <!-- RESERVA PARA FOTO PROFISSIONAL -->
+      <div
+        class="md:col-span-5 aspect-[4/5] bg-stone-200 border  border-stone-300/60 relative overflow-hidden shadow-sm reveal group">
+        <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
+          <span> <img src="assets/aboutme.jpg" alt="Foto de sentado em uma sala de atendimento, usando oculos, olhos escuros, cabelo preto, levemente grisalho, com óculos de massa preto, com olhar atento e com leve sorriso, passando a impressão de acolhimento e confiabilidade."></span>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 space-y-6 reveal delay-100">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">Sobre a Prática</h2>
+        <h3 class="text-3xl font-light text-stone-900 tracking-tight font-serif">O percurso clínico e o olhar
+          terapêutico</h3>
+        <p class="text-stone-600 font-light leading-relaxed text-base">
+          Graduado em Psicologia pela Pontifícia Universidade Católica de Goiás em 2006, estruturei a minha trajetória
+          sob a perspetiva da fenomenologia, do existencialismo e, essencialmente, da psicanálise. Compreendo a
+          psicologia clínica não como um processo de enquadramento ou de diagnóstico rígido, mas como uma investigação
+          profunda da existência humana.
+        </p>
+        <p class="text-stone-600 font-light leading-relaxed text-base">
+          A minha escuta é pautada na rica herança dos grandes teóricos do inconsciente e do desenvolvimento do sujeito.
+          O foco está em oferecer um espaço ético, seguro e confidencial onde a palavra possa circular livremente,
+          permitindo desatar os nós dos sintomas que geram sofrimento e abrindo espaço para novas formas de existir.
+        </p>
+        <div class="pt-2 border-t border-stone-200 flex items-center justify-between">
+          <div>
+            <span class="block text-[10px] uppercase tracking-widest text-stone-400">Atuação Profissional</span>
+            <span class="text-sm font-medium text-stone-800">Início da trajetória em 2006</span>
+          </div>
+          <div>
+            <span class="block text-[10px] uppercase tracking-widest text-stone-400">Foco Clínico</span>
+            <span class="text-sm font-medium text-stone-800">Psicanálise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO: ESPECIALIDADES E TEMAS DE ATENDIMENTO (Com sistema de Ver Mais) -->
+  <section id="especialidades" class="border-t border-stone-200 py-24 md:py-32 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center space-y-4 mb-16 reveal">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">Áreas de Atuação</h2>
+        <h3 class="text-3xl md:text-4xl font-light text-stone-900 tracking-tight font-serif">Demandas Acompanhadas em
+          Consultório</h3>
+        <p class="text-stone-600 font-light max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          Cada percurso terapêutico é singular. Abaixo estão as temáticas e sofrimentos humanos acolhidos e trabalhados
+          sob o olhar da psicanálise e do existencialismo.
+        </p>
+      </div>
+
+      <!-- Grelha de Especialidades -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal delay-100">
+
+        <!-- 1. Autoconhecimento (Sempre Visível) -->
+        <div
+          class="p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-compass"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Autoconhecimento</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Investigar a própria história, desvendar narrativas pessoais e compreender os desejos para tomar decisões
+              mais conscientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Traumas e Estresse Pós-Traumático (Sempre Visível) -->
+        <div
+          class="p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-shield-exclamation"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Traumas e TEPT</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Espaço de elaboração gradual e seguro para marcas do passado e experiências avassaladoras que continuam a
+              ecoar no presente.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Depressão (Sempre Visível) -->
+        <div
+          class="p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-cloud-rain-heavy"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Depressão</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Escuta atenta ao vazio existencial, à perda do sentido, ao desânimo profundo e à estagnação da energia
+              vital.
+            </p>
+          </div>
+        </div>
+
+        <!-- OUTRAS ESPECIALIDADES (Ocultas por padrão sob o "Ver Mais") -->
+
+        <!-- 4. Luto -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-flower1"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Luto e Perdas</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Suporte e acolhimento sensível no processo de reorganização da existência após a perda de entes queridos,
+              vínculos ou projetos de vida.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Medos e Pânico -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-wind"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Medos e Pânico</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Compreensão das manifestações agudas da angústia no corpo e mente, ajudando a restabelecer o sentimento de
+              segurança.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Conflitos Familiares -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-people"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Conflitos Familiares</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Investigação dos papéis relacionais, dificuldades de comunicação e impasses nos laços afetivos mais
+              próximos.
+            </p>
+          </div>
+        </div>
+
+        <!-- 7. Burnout e Estresse Profissional -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-fire"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Burnout e Estresse</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Tratamento do esgotamento físico e mental decorrente das exigências do trabalho e das dinâmicas de
+              performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8. Bullying e Rejeição Social -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-chat-square-quote"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Bullying e Rejeição</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Recuperação da autoimagem e fortalecimento emocional diante de vivências de exclusão ou agressões
+              psicológicas nos âmbitos escolar e social.
+            </p>
+          </div>
+        </div>
+
+        <!-- 9. Compulsões -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-arrow-repeat"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Compulsões</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Análise das atitudes repetitivas que servem como tentativas temporárias de aliviar tensões ou sentimentos
+              difíceis de nomear.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10. Autossuficiência e Isolamento -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-person-lock"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Autossuficiência</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              O peso de carregar tudo sozinho e a dificuldade de pedir ajuda. Espaço para viabilizar conexões mais
+              seguras e autênticas com os outros.
+            </p>
+          </div>
+        </div>
+
+        <!-- 11. Manejo da Dor (Física e Emocional) -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-activity"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Lidando com a Dor</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Acompanhamento e suporte emocional a pessoas que enfrentam dores crônicas ou processos de adoecimento
+              físico que afetam o bem-estar psicológico.
+            </p>
+          </div>
+        </div>
+
+        <!-- 12. Estresse Geral -->
+        <div
+          class="specialty-extra hidden p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 mb-4">
+              <i class="bi bi-hourglass-split"></i>
+            </div>
+            <h4 class="text-lg font-medium text-stone-950 font-serif mb-2">Estresse Geral</h4>
+            <p class="text-sm text-stone-600 font-light leading-relaxed">
+              Desenvolvimento de recursos psíquicos para gerir as pressões, pressas e exigências constantes da rotina
+              quotidiana contemporânea.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTÃO VER MAIS / VER MENOS -->
+      <div class="text-center mt-12 reveal">
+        <button id="toggle-specialties"
+          class="inline-flex items-center justify-center px-8 py-3.5 border border-stone-800 text-stone-900 bg-transparent hover:bg-stone-900 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all duration-300">
+          <span id="toggle-text">Ver todas as especialidades</span>
+          <i id="toggle-icon" class="bi bi-chevron-down ml-2"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 3: O SETTING TERAPÊUTICO -->
+  <section id="atendimento" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/20">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+      <!-- Coluna da Esquerda: O Conceito -->
+      <div class="md:col-span-5 space-y-6 reveal">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">A Experiência Clínica</h2>
+        <h3 class="text-3xl font-light text-stone-900 tracking-tight font-serif">O Setting Terapêutico</h3>
+        <p class="text-stone-600 font-light leading-relaxed">
+          Mais do que uma modalidade de atendimento, o setting online é a construção de um ambiente de pausa e presença.
+          Do conforto e privacidade do seu próprio espaço, criamos juntos um ponto de encontro inteiramente dedicado à
+          sua subjetividade.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="bg-stone-100/80 p-5 border border-stone-200/60">
+            <span class="block text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2">Público-alvo</span>
+            <span class="text-stone-800 font-medium text-base">Adultos</span>
+            <span class="block text-xs text-stone-500 mt-1">Atendimento focado nas complexidades da vida adulta.</span>
+          </div>
+          <div class="bg-stone-100/80 p-5 border border-stone-200/60">
+            <span class="block text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2">Estrutura</span>
+            <span class="text-stone-800 font-medium text-base">50 minutos</span>
+            <span class="block text-xs text-stone-500 mt-1">Frequência definida individualmente conforme sua
+              demanda.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna da Direita: Os Pilares de Acolhimento -->
+      <div class="md:col-span-7 space-y-8 reveal delay-100">
+        <h3 class="text-xl font-medium text-stone-900">Como é constituído este espaço de escuta:</h3>
+
+        <div class="space-y-6">
+          <!-- Pilar 1: Liberdade de Expressão -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200">
+              <i class="bi bi-chat-left-heart"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-stone-950">Livre Circulação da Palavra</h4>
+              <p class="text-sm text-stone-600 font-light mt-1 leading-relaxed">
+                Um espaço aberto e receptivo para você falar livremente sobre suas dores, angústias, anseios e
+                descobertas, sabendo que tudo o que for trazido será acolhido sem julgamentos morais ou fórmulas
+                prontas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 2: Ambiente Calmo e Seguro -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-stone-950">Segurança, Calma e Privacidade</h4>
+              <p class="text-sm text-stone-600 font-light mt-1 leading-relaxed">
+                As sessões são pensadas para garantir que você esteja em um ambiente de máxima tranquilidade. A
+                flexibilidade do atendimento online permite que você escolha o seu próprio local seguro para vivenciar o
+                processo terapêutico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 3: Sigilo Absoluto -->
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200">
+              <i class="bi bi-key"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-stone-950">Acolhimento sob Sigilo Ético</h4>
+              <p class="text-sm text-stone-600 font-light mt-1 leading-relaxed">
+                O respeito absoluto à privacidade e o sigilo profissional guiam cada encontro. Os canais digitais de
+                comunicação são protegidos para que nossa conversa permaneça estritamente restrita a nós dois.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 4: PERGUNTAS FREQUENTES (FAQ) -->
+  <section id="faq" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/30">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center space-y-4 mb-16 reveal">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">Esclarecimentos</h2>
+        <h3 class="text-3xl font-light text-stone-900 tracking-tight font-serif">Perguntas Frequentes</h3>
+        <p class="text-stone-600 font-light max-w-lg mx-auto text-sm leading-relaxed">
+          Algumas das principais dúvidas sobre o funcionamento do processo psicoterapêutico no formato online.
+        </p>
+      </div>
+
+      <!-- Itens do Acordeão -->
+      <div class="space-y-4 reveal delay-100">
+
+        <!-- FAQ 1 -->
+        <div class="border-b border-stone-200 pb-4">
+          <button
+            class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <span class="text-base md:text-lg font-light tracking-tight">Como funcionam as consultas online?</span>
+            <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
+              As consultas são realizadas através de videochamada em plataformas seguras (como Google Meet, WhatsApp,
+              Zoom ou Discord). Para a sessão, você precisará apenas de uma ligação estável à internet, um dispositivo
+              (telemóvel ou computador) com câmara e um espaço privado e silencioso onde se sinta à vontade para
+              conversar.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border-b border-stone-200 pb-4">
+          <button
+            class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <span class="text-base md:text-lg font-light tracking-tight">O atendimento online é tão eficaz quanto o
+              presencial?</span>
+            <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
+              Sim. Diversos estudos científicos e a prática clínica quotidiana demonstram que a psicoterapia online
+              alcança exatamente os mesmos resultados e profundidade que a modalidade presencial. Ela mantém todo o
+              rigor técnico, ético e de acolhimento, agregando a facilidade de acesso e conforto geográfico.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border-b border-stone-200 pb-4">
+          <button
+            class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <span class="text-base md:text-lg font-light tracking-tight">Como é garantido o sigilo das sessões
+              virtuais?</span>
+            <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
+              O sigilo profissional é absoluto e assegurado pelo Código de Ética do Psicólogo. Do meu lado, as sessões
+              são conduzidas num ambiente fechado, seguro e privado. Recomendo também que o paciente utilize
+              auscultadores de ouvido e escolha um local reservado em sua casa ou escritório onde outras pessoas não
+              possam ouvir a conversa.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border-b border-stone-200 pb-4">
+          <button
+            class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <span class="text-base md:text-lg font-light tracking-tight">Qual a duração e frequência dos
+              encontros?</span>
+            <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
+              Cada sessão individual dura em média 50 minutos. A frequência ideal recomendada para a continuidade e
+              aprofundamento do processo analítico é semanal. Contudo, essa periodicidade pode ser reavaliada e ajustada
+              de acordo com as necessidades singulares de cada caso.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border-b border-stone-200 pb-4">
+          <button
+            class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <span class="text-base md:text-lg font-light tracking-tight">Como posso agendar a minha primeira
+              consulta?</span>
+            <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
+              O processo é muito simples. Basta clicar em qualquer um dos botões de agendamento (como o botão "Agendar
+              Consulta" no topo ou o "Agendar Primeiro Encontro" mais abaixo). Você será direcionado para o meu
+              WhatsApp, onde combinaremos de forma direta e sem burocracias o melhor dia e horário para iniciarmos o
+              percurso terapêutico.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 5: MODALIDADES E PLATAFORMAS -->
+  <section id="modalidades" class="bg-stone-900 text-stone-100 py-24 md:py-32 border-t border-stone-950">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <div class="max-w-3xl mx-auto space-y-6 mb-16 reveal">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-stone-500">Praticidade & Acessibilidade</h2>
+        <h3 class="text-3xl md:text-4xl font-light tracking-tight text-white font-serif">Consultório Essencialmente
+          Online</h3>
+        <p class="text-stone-400 font-light leading-relaxed text-base">
+          As consultas ocorrem exclusivamente de modo digital, garantindo total privacidade, conveniência geográfica e o
+          estrito cumprimento das diretrizes de sigilo ético da prática psicológica.
+        </p>
+      </div>
+
+      <!-- Grelha de Plataformas -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16 reveal delay-100">
+        <!-- Google Meet -->
+        <div
+          class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div
+            class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3">
+            <i class="bi bi-camera-video text-xl"></i>
+          </div>
+          <span class="text-sm font-light text-stone-300">Google Meet</span>
+        </div>
+        <!-- WhatsApp -->
+        <div
+          class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div
+            class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3">
+            <i class="bi bi-whatsapp text-xl"></i>
+          </div>
+          <span class="text-sm font-light text-stone-300">WhatsApp</span>
+        </div>
+        <!-- Zoom -->
+        <div
+          class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div
+            class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3">
+            <i class="bi bi-display text-xl"></i>
+          </div>
+          <span class="text-sm font-light text-stone-300">Zoom</span>
+        </div>
+        <!-- Discord -->
+        <div
+          class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div
+            class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3">
+            <i class="bi bi-discord text-xl"></i>
+          </div>
+          <span class="text-sm font-light text-stone-300">Discord</span>
+        </div>
+      </div>
+
+      <!-- CTA FORMATO BOTÃO ELEVADO E TÁTIL -->
+      <div class="reveal delay-200">
+        <a href="https://wa.me/556298534925" target="_blank"
+          class="inline-flex items-center justify-center px-10 py-5 bg-white text-stone-950 rounded-md text-sm font-semibold tracking-wider uppercase shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-300 ">
+          <i class="bi bi-calendar-check mr-2"></i> Agendar Primeiro Encontro
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ (FOOTER) -->
+  <footer class="bg-stone-950 text-stone-500 text-xs py-12 border-t border-stone-900">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <p class="font-medium text-stone-300">Bruno Camargo Manso</p>
+        <p class="text-[11px] text-stone-500 mt-1">Psicólogo Clínico &bull; CRP 09/004628</p>
+      </div>
+
+      <div class="flex space-x-6 text-sm">
+        <a href="https://wa.me/556298534925" target="_blank" class="hover:text-white transition-colors"
+          title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:bruno.psico@exemplo.com" class="hover:text-white transition-colors" title="Email"><i
+            class="bi bi-envelope"></i></a>
+      </div>
+
+      <div class="text-center md:text-right text-[11px]">
+        <p>&copy; 2026 Bruno Camargo Manso. Todos os direitos reservados.</p>
+        <p class="mt-1">Desenvolvido com foco em acessibilidade e privacidade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT PARA EFEITOS DE REVELAÇÃO, ACORDEÃO E COLAPSO DE ESPECIALIDADES -->
+  <script>
+    // Função para verificar se os elementos estão visíveis no ecrã ao fazer scroll
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      const revealPoint = 100; // Distância mínima antes do elemento aparecer
+
+      reveals.forEach(reveal => {
+        const revealTop = reveal.getBoundingClientRect().top;
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add('active');
+        }
+      });
+    }
+
+    // Lógica para o Colapso das Especialidades (Ver mais / Ver menos)
+    const toggleBtn = document.getElementById('toggle-specialties');
+    const extraSpecialties = document.querySelectorAll('.specialty-extra');
+    const toggleText = document.getElementById('toggle-text');
+    const toggleIcon = document.getElementById('toggle-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = extraSpecialties[0].classList.contains('hidden');
+
+      extraSpecialties.forEach(el => {
+        if (isHidden) {
+          el.classList.remove('hidden');
+          // Força a execução do fade-in ao exibir os elementos ocultos
+          setTimeout(() => {
+            el.classList.add('reveal', 'active');
+          }, 50);
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('active');
+        }
+      });
+
+      if (isHidden) {
+        toggleText.textContent = 'Ver menos especialidades';
+        toggleIcon.classList.replace('bi-chevron-down', 'bi-chevron-up');
+      } else {
+        toggleText.textContent = 'Ver todas as especialidades';
+        toggleIcon.classList.replace('bi-chevron-up', 'bi-chevron-down');
+
+        // Retorna suavemente o utilizador para o topo da secção de Especialidades ao fechar
+        document.getElementById('especialidades').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Lógica para funcionamento do Acordeão de FAQ
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('i');
+
+        // Fecha outros painéis que possam estar abertos (experiência mais limpa)
+        document.querySelectorAll('.faq-content').forEach(otherContent => {
+          if (otherContent !== content && otherContent.style.maxHeight !== '0px' && otherContent.style.maxHeight !== '') {
+            otherContent.style.maxHeight = '0px';
+            otherContent.previousElementSibling.querySelector('i').classList.replace('bi-dash-lg', 'bi-plus-lg');
+          }
+        });
+
+        // Alterna o estado do item clicado
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+          content.style.maxHeight = '0px';
+          icon.classList.replace('bi-dash-lg', 'bi-plus-lg');
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.classList.replace('bi-plus-lg', 'bi-dash-lg');
+        }
+      });
+    });
+
+    // Executa no scroll do ecrã
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Executa uma primeira verificação após carregar a página completamente
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(revealOnScroll, 100);
+    });
+  </script>
+
+</body>
+
+</html>
