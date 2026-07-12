@@ -15,7 +15,7 @@
   <meta property="og:locale" content="pt_PT">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bruno Camargo Manso — Psicólogo Clínico Online">
-  <meta property="og:description" content="Um convite à escuta atenta do sofrimento e das singularidades através de um espaço terapêutico seguro, acolhedor e totalmente confidencial.">
+  <meta property="og:description" content="Um convite à escuta atenta do sofrimento e das singularidades através de um percurso analítico e existencial adaptado à vida contemporânea.">
   <meta property="og:url" content="https://brunocamargomanso.com.br">
   <meta property="og:site_name" content="Bruno Camargo Manso Psicologia">
   <meta property="og:image" content="https://brunocamargomanso.com.br/assets/foto-partilha.jpg">
@@ -180,7 +180,23 @@
       color: #000000 !important;
     }
 
-    /* Controle de Tamanho de Fonte Dinâmico */
+    /* --- CONTROLE DINÂMICO DE TAMANHO DE FONTE --- */
+    /* Tamanho reduzido (A-) */
+    .font-size-sm p {
+      font-size: 0.85rem !important;
+      line-height: 1.5 !important;
+    }
+    .font-size-sm h1 {
+      font-size: 2.25rem !important;
+    }
+    .font-size-sm h3 {
+      font-size: 1.6rem !important;
+    }
+    .font-size-sm a, .font-size-sm button {
+      font-size: 0.75rem !important;
+    }
+
+    /* Tamanho ampliado (A+) */
     .font-size-lg p {
       font-size: 1.15rem !important;
       line-height: 1.75 !important;
@@ -195,6 +211,7 @@
       font-size: 0.95rem !important;
     }
 
+    /* Tamanho extra-ampliado (A++) */
     .font-size-xl p {
       font-size: 1.3rem !important;
       line-height: 1.85 !important;
@@ -218,13 +235,19 @@
     Ir direto para o conteúdo principal
   </a>
 
+  <!-- TOAST DE NOTIFICAÇÃO CUSTOMIZADO (Para avisos de acessibilidade) -->
+  <div id="accessibility-toast" class="fixed top-24 left-1/2 transform -translate-x-1/2 z-[200] hidden bg-stone-900 text-white px-6 py-3 shadow-2xl border border-stone-700 items-center space-x-3 transition-all duration-300 rounded-none" role="alert" aria-live="assertive">
+    <i class="bi bi-info-circle text-amber-500" aria-hidden="true"></i>
+    <span id="toast-message" class="text-xs font-medium tracking-wide"></span>
+  </div>
+
   <!-- BARRA DE ACESSIBILIDADE E ATALHOS (No topo do site) -->
-  <div class="bg-stone-100 border-b border-stone-200 py-2 text-xs text-stone-600 transition-colors">
+  <div class="bg-stone-100 border-b border-stone-200 py-2 text-xs text-stone-600 transition-colors" role="region" aria-label="Opções de Acessibilidade">
     <div class="max-w-5xl mx-auto px-6 flex items-center justify-between flex-wrap gap-2">
       <div class="flex items-center space-x-4">
-        <span><i class="bi bi-eye mr-1" aria-hidden="true"></i> Opções visuais:</span>
+        <span class="font-medium"><i class="bi bi-eye mr-1" aria-hidden="true"></i> Opções visuais:</span>
         <button onclick="toggleContrast()" id="btn-contrast-top" class="hover:underline focus:outline-2 focus:outline-stone-800 px-2 py-1 rounded flex items-center gap-1" title="Alternar Alto Contraste">
-          <i class="bi bi-circle-half"></i> Alto Contraste
+          <i class="bi bi-circle-half" aria-hidden="true"></i> Alto Contraste
         </button>
         <div class="flex items-center space-x-1 border-l border-stone-300 pl-4">
           <span class="mr-1">Texto:</span>
@@ -233,8 +256,13 @@
           <button onclick="changeFontSize('lg')" class="hover:bg-stone-200 px-2 py-0.5 font-bold rounded" title="Aumentar texto" aria-label="Aumentar tamanho do texto">A+</button>
         </div>
       </div>
-      <div class="hidden sm:block text-[11px]">
-        CRP 09/004628 | Atendimento Online Autoral
+      
+      <!-- FERRAMENTA DE ÁUDIO READ-ALOUD (Ouvir o site) -->
+      <div class="flex items-center space-x-2">
+        <button onclick="toggleSpeech()" id="btn-audio-reading" class="hover:bg-stone-200 px-3 py-1 font-semibold rounded flex items-center gap-1.5 transition-colors" title="Ouvir conteúdo desta página" aria-label="Ouvir o conteúdo deste site em áudio">
+          <i class="bi bi-volume-up-fill" id="audio-icon" aria-hidden="true"></i>
+          <span id="audio-text">Ouvir página</span>
+        </button>
       </div>
     </div>
   </div>
@@ -247,7 +275,7 @@
         <span class="text-[10px] text-stone-500 tracking-widest uppercase mt-0.5">Psicólogo Clínico • CRP 09/004628</span>
       </div>
 
-      <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-stone-600">
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-stone-600" aria-label="Navegação principal">
         <a href="#sobre" class="hover:text-stone-900 transition-colors">Sobre</a>
         <a href="#especialidades" class="hover:text-stone-900 transition-colors">Especialidades</a>
         <a href="#atendimento" class="hover:text-stone-900 transition-colors">O Setting</a>
@@ -255,15 +283,7 @@
         <a href="#modalidades" class="hover:text-stone-900 transition-colors">Consultas</a>
       </nav>
 
-      <div class="flex items-center space-x-4">
-        <!-- Ícone rápido de contraste no cabeçalho -->
-        <button onclick="toggleContrast()" class="p-2 text-stone-600 hover:text-stone-900 focus:outline-none" title="Mudar Contraste Visual" aria-label="Alternar alto contraste">
-          <i class="bi bi-circle-half text-lg"></i>
-        </button>
-        <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-medium tracking-widest uppercase border border-stone-800 hover:bg-stone-900 hover:text-white transition-all duration-300 rounded-none">
-          Agendar Consulta
-        </a>
-      </div>
+      
     </div>
   </header>
 
@@ -271,10 +291,10 @@
   <main id="conteudo-principal">
 
     <!-- BLOCO 1: APRESENTAÇÃO HERO -->
-    <section class="relative w-full overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-orange-50/40 border-b border-stone-200/40">
-      <!-- Elemento decorativo de luz e cor no fundo -->
-      <div class="absolute top-1/4 right-0 w-80 h-80 bg-orange-100/30 rounded-full blur-3xl -z-10"></div>
-      <div class="absolute bottom-10 left-10 w-60 h-60 bg-stone-200/20 rounded-full blur-2xl -z-10"></div>
+    <section class="relative w-full overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-orange-50/40 border-b border-stone-200/40" aria-label="Introdução">
+      <!-- Elemento decorativo de luz e col no fundo -->
+      <div class="absolute top-1/4 right-0 w-80 h-80 bg-orange-100/30 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+      <div class="absolute bottom-10 left-10 w-60 h-60 bg-stone-200/20 rounded-full blur-2xl -z-10" aria-hidden="true"></div>
 
       <div class="max-w-5xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-12 gap-12 items-center min-h-[80vh]">
 
@@ -282,16 +302,16 @@
         <div class="md:col-span-7 space-y-6 reveal active">
           <p class="text-xs font-bold tracking-widest uppercase text-stone-500">Psicologia Clínica de Orientação Psicanalítica</p>
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-stone-950 leading-[1.15] font-serif">
-            Não somos apenas o que o world fez de nós, mas o espaço que descobrimos para <span class="italic font-normal text-stone-800">inventar a nós mesmos</span>.
+            Não somos apenas o que o mundo fez de nós, mas o espaço que descobrimos para <span class="italic font-normal text-stone-800">inventar a nós mesmos</span>.
           </h1>
           <p class="text-stone-600 text-lg md:text-xl font-light max-w-xl leading-relaxed">
             Um convite à escuta atenta do sofrimento e das singularidades através de um percurso analítico e existencial adaptado à vida contemporânea.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white text-sm font-medium tracking-wider uppercase hover:bg-stone-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white text-sm font-medium tracking-wider uppercase hover:bg-stone-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" aria-label="Iniciar Atendimento pelo WhatsApp com o psicólogo Bruno Camargo Manso">
               <i class="bi bi-whatsapp mr-2" aria-hidden="true"></i> Iniciar Atendimento
             </a>
-            <a href="#sobre" class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 bg-white/60 hover:bg-white text-sm font-medium tracking-wider uppercase transition-all duration-300">
+            <a href="#sobre" class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 bg-white/60 hover:bg-white text-sm font-medium tracking-wider uppercase transition-all duration-300" aria-label="Ir para a seção Sobre para conhecer mais sobre a prática terapêutica">
               Saber mais sobre a prática
             </a>
           </div>
@@ -300,7 +320,7 @@
         <!-- Arte Fluida/Equilíbrio (Coluna Direita) -->
         <div class="hidden md:block md:col-span-5 aspect-[4/5] relative overflow-hidden shadow-sm reveal group active">
           <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
-            <img src="assets/turner-ai.png" alt="Imagem inspirado em pinturas de Turner: Uma vista para o mar, no centro da imagem o nascer do sol dourado e acolhedor. À esquerda falẽsias com cores que tendem do marrom ao terracota.  " onerror="this.onerror=null; this.src=''">
+            <img src="assets/turner-ai.png" alt="Pintura artística inspirada nas obras do pintor William Turner: Um mar sereno envolto por falésias em tons terracota e um amanhecer dourado acolhedor no centro, representando o autoconhecimento." onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800';">
           </div>
         </div>
 
@@ -308,12 +328,12 @@
     </section>
 
     <!-- BLOCO 2: SOBRE MIM -->
-    <section id="sobre" class="border-t border-stone-200 bg-stone-100/50 py-24 md:py-32">
+    <section id="sobre" class="border-t border-stone-200 bg-stone-100/50 py-24 md:py-32" aria-label="Sobre o profissional">
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
         <!-- FOTO PROFISSIONAL -->
         <div class="md:col-span-5 aspect-[4/5] bg-stone-200 border border-stone-300/60 relative overflow-hidden shadow-sm reveal group active">
           <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
-            <img src="assets/aboutme.jpg" alt="Foto de Bruno Camargo Manso, sentado em uma sala de atendimento, usando oculos, olhos escuros, cabelo preto, levemente grisalho, com óculos de massa preto, com olhar atento e com leve sorriso, passando a impressão de acolhimento e confiabilidade." onerror="this.src=''">
+            <img src="assets/aboutme.png" alt="Foto de Bruno Camargo Manso, psicólogo clínico, sentado sorrindo de forma acolhedora em sua sala de atendimento." onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800';">
           </div>
         </div>
 
@@ -326,7 +346,7 @@
           <p class="text-stone-600 font-light leading-relaxed text-base">
             A minha escuta é pautada na rica herança dos grandes teóricos do inconsciente e do desenvolvimento do sujeito. O foco está em oferecer um espaço ético, seguro e confidencial onde a palavra possa circular livremente, permitindo desatar os nós dos sintomas que geram sofrimento e abrindo espaço para novas formas de existir.
           </p>
-          <div class="pt-2 border-t border-stone-200 flex items-center justify-between">
+          <div class="pt-2 border-t border-stone-200 flex items-center justify-between" role="region" aria-label="Resumo Profissional">
             <div>
               <span class="block text-[10px] uppercase tracking-widest text-stone-400">Atuação Profissional</span>
               <span class="text-sm font-medium text-stone-800">Início da trajetória em 2006</span>
@@ -341,11 +361,11 @@
     </section>
 
     <!-- BLOCO: ESPECIALIDADES E TEMAS DE ATENDIMENTO -->
-    <section id="especialidades" class="border-t border-stone-200 py-24 md:py-32 bg-stone-50">
+    <section id="especialidades" class="border-t border-stone-200 py-24 md:py-32 bg-stone-50" aria-labelledby="title-areas">
       <div class="max-w-5xl mx-auto px-6">
 
         <div class="text-center space-y-4 mb-16 reveal active">
-          <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">Áreas de Atuação</h2>
+          <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400" id="title-areas">Áreas de Atuação</h2>
           <h3 class="text-3xl md:text-4xl font-light text-stone-900 tracking-tight font-serif">Demandas Acompanhadas em Consultório</h3>
           <p class="text-stone-600 font-light max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             Cada percurso terapêutico é singular. Abaixo estão as temáticas e sofrimentos humanos acolhidos e trabalhados sob o olhar da psicanálise e do existencialismo.
@@ -353,7 +373,7 @@
         </div>
 
         <!-- Grelha de Especialidades -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal delay-100 active">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal delay-100 active" id="specialties-grid" aria-live="polite">
 
           <!-- 1. Autoconhecimento (Sempre Visível) -->
           <div class="p-6 bg-white border border-stone-200/60 shadow-sm hover:border-stone-300 transition-all duration-300 flex flex-col justify-between">
@@ -517,7 +537,7 @@
 
         <!-- BOTÃO VER MAIS / VER MENOS -->
         <div class="text-center mt-12 reveal active">
-          <button id="toggle-specialties" class="inline-flex items-center justify-center px-8 py-3.5 border border-stone-800 text-stone-900 bg-transparent hover:bg-stone-900 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all duration-300">
+          <button id="toggle-specialties" class="inline-flex items-center justify-center px-8 py-3.5 border border-stone-800 text-stone-900 bg-transparent hover:bg-stone-900 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all duration-300" aria-expanded="false" aria-controls="specialties-grid">
             <span id="toggle-text">Ver todas as especialidades</span>
             <i id="toggle-icon" class="bi bi-chevron-down ml-2" aria-hidden="true"></i>
           </button>
@@ -527,7 +547,7 @@
     </section>
 
     <!-- BLOCO 3: O SETTING TERAPÊUTICO -->
-    <section id="atendimento" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/20">
+    <section id="atendimento" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/20" aria-label="Setting terapêutico">
       <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-12 lg:gap-16 items-start">
 
         <!-- Coluna da Esquerda: O Conceito -->
@@ -539,12 +559,12 @@
           </p>
 
           <div class="grid grid-cols-2 gap-4 pt-2">
-            <div class="bg-stone-100/80 p-5 border border-stone-200/60">
+            <div class="bg-stone-100/80 p-5 border border-stone-200/60" role="region" aria-label="Público-alvo">
               <span class="block text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2">Público-alvo</span>
               <span class="text-stone-800 font-medium text-base">Adultos</span>
               <span class="block text-xs text-stone-500 mt-1">Atendimento focado nas complexidades da vida adulta.</span>
             </div>
-            <div class="bg-stone-100/80 p-5 border border-stone-200/60">
+            <div class="bg-stone-100/80 p-5 border border-stone-200/60" role="region" aria-label="Estrutura de Sessão">
               <span class="block text-[10px] font-bold tracking-widest text-stone-400 uppercase mb-2">Estrutura</span>
               <span class="text-stone-800 font-medium text-base">50 minutos</span>
               <span class="block text-xs text-stone-500 mt-1">Frequência definida individualmente conforme sua demanda.</span>
@@ -556,9 +576,9 @@
         <div class="md:col-span-7 space-y-8 reveal delay-100 active">
           <h3 class="text-xl font-medium text-stone-900">Como é constituído este espaço de escuta:</h3>
 
-          <div class="space-y-6">
+          <div class="space-y-6" role="list">
             <!-- Pilar 1: Liberdade de Expressão -->
-            <div class="flex gap-4">
+            <div class="flex gap-4" role="listitem">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200" aria-hidden="true">
                 <i class="bi bi-chat-left-heart"></i>
               </div>
@@ -571,7 +591,7 @@
             </div>
 
             <!-- Pilar 2: Ambiente Calmo e Seguro -->
-            <div class="flex gap-4">
+            <div class="flex gap-4" role="listitem">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200" aria-hidden="true">
                 <i class="bi bi-shield-check"></i>
               </div>
@@ -584,7 +604,7 @@
             </div>
 
             <!-- Pilar 3: Sigilo Absoluto -->
-            <div class="flex gap-4">
+            <div class="flex gap-4" role="listitem">
               <div class="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200" aria-hidden="true">
                 <i class="bi bi-key"></i>
               </div>
@@ -602,10 +622,10 @@
     </section>
 
     <!-- BLOCO 4: PERGUNTAS FREQUENTES (FAQ) -->
-    <section id="faq" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/30">
+    <section id="faq" class="border-t border-stone-200 py-24 md:py-32 bg-stone-100/30" aria-labelledby="title-faq">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-center space-y-4 mb-16 reveal">
-          <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400">Esclarecimentos</h2>
+          <h2 class="text-xs font-bold tracking-widest uppercase text-stone-400" id="title-faq">Esclarecimentos</h2>
           <h3 class="text-3xl font-light text-stone-900 tracking-tight font-serif">Perguntas Frequentes</h3>
           <p class="text-stone-600 font-light max-w-lg mx-auto text-sm leading-relaxed">
             Algumas das principais dúvidas sobre o funcionamento do processo psicoterapêutico no formato online.
@@ -613,15 +633,15 @@
         </div>
 
         <!-- Itens do Acordeão -->
-        <div class="space-y-4 reveal delay-100">
+        <div class="space-y-4 reveal delay-100" role="region" aria-label="Perguntas e respostas frequentes">
 
           <!-- FAQ 1 -->
           <div class="border-b border-stone-200 pb-4">
-            <button class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <button id="faq-btn-1" aria-controls="faq-content-1" aria-expanded="false" class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
               <span class="text-base md:text-lg font-light tracking-tight">Como funcionam as consultas online?</span>
-              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4" aria-hidden="true"></i>
+              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
             </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div id="faq-content-1" role="region" aria-labelledby="faq-btn-1" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
               <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
                 As consultas são realizadas através de videochamada em plataformas seguras (como Google Meet, WhatsApp, Zoom ou Discord). Para a sessão, você precisará apenas de uma ligação estável à internet, um dispositivo (telemóvel ou computador) com câmara e um espaço privado e silencioso onde se sinta à vontade para conversar.
               </p>
@@ -630,11 +650,11 @@
 
           <!-- FAQ 2 -->
           <div class="border-b border-stone-200 pb-4">
-            <button class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <button id="faq-btn-2" aria-controls="faq-content-2" aria-expanded="false" class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
               <span class="text-base md:text-lg font-light tracking-tight">O atendimento online é tão eficaz quanto o presencial?</span>
-              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4" aria-hidden="true"></i>
+              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
             </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div id="faq-content-2" role="region" aria-labelledby="faq-btn-2" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
               <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
                 Sim. Diversos estudos científicos e a prática clínica quotidiana demonstram que a psicoterapia online alcança exatamente os mesmos resultados e profundidade que a modalidade presencial. Ela mantém todo o rigor técnico, ético e de acolhimento, agregando a facilidade de acesso e conforto geográfico.
               </p>
@@ -643,11 +663,11 @@
 
           <!-- FAQ 3 -->
           <div class="border-b border-stone-200 pb-4">
-            <button class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <button id="faq-btn-3" aria-controls="faq-content-3" aria-expanded="false" class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
               <span class="text-base md:text-lg font-light tracking-tight">Como é garantido o sigilo das sessões virtuais?</span>
-              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4" aria-hidden="true"></i>
+              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
             </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div id="faq-content-3" role="region" aria-labelledby="faq-btn-3" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
               <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
                 O sigilo profissional é absoluto e assegurado pelo Código de Ética do Psicólogo. Do meu lado, as sessões são conduzidas num ambiente fechado, seguro e privado. Recomendo também que o paciente utilize auscultadores de ouvido e escolha um local reservado em sua casa ou escritório onde outras pessoas não possam ouvir a conversa.
               </p>
@@ -656,11 +676,11 @@
 
           <!-- FAQ 4 -->
           <div class="border-b border-stone-200 pb-4">
-            <button class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <button id="faq-btn-4" aria-controls="faq-content-4" aria-expanded="false" class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
               <span class="text-base md:text-lg font-light tracking-tight">Qual a duração e frequência dos encontros?</span>
-              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4" aria-hidden="true"></i>
+              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
             </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div id="faq-content-4" role="region" aria-labelledby="faq-btn-4" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
               <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
                 Cada sessão individual dura em média 50 minutos. A frequência ideal recomendada para a continuidade e aprofundamento do processo analítico é semanal. Contudo, essa periodicidade pode ser reavaliada e ajustada de acordo com as necessidades singulares de cada caso.
               </p>
@@ -669,11 +689,11 @@
 
           <!-- FAQ 5 -->
           <div class="border-b border-stone-200 pb-4">
-            <button class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
+            <button id="faq-btn-5" aria-controls="faq-content-5" aria-expanded="false" class="faq-toggle w-full flex justify-between items-center py-4 text-left font-medium text-stone-900 hover:text-stone-700 transition-colors focus:outline-none">
               <span class="text-base md:text-lg font-light tracking-tight">Como posso agendar a minha primeira consulta?</span>
-              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4" aria-hidden="true"></i>
+              <i class="bi bi-plus-lg text-stone-400 transition-transform duration-300 ml-4"></i>
             </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div id="faq-content-5" role="region" aria-labelledby="faq-btn-5" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
               <p class="text-sm text-stone-600 font-light leading-relaxed pb-4">
                 O processo é muito simples. Basta clicar em qualquer um dos botões de agendamento (como o botão "Agendar Consulta" no topo ou o "Agendar Primeiro Encontro" mais abaixo). Você será direcionado para o meu WhatsApp, onde combinaremos de forma direta e sem burocracias o melhor dia e horário para iniciarmos o percurso terapêutico.
               </p>
@@ -685,7 +705,7 @@
     </section>
 
     <!-- BLOCO 5: MODALIDADES E PLATAFORMAS -->
-    <section id="modalidades" class="bg-stone-900 text-stone-100 py-24 md:py-32 border-t border-stone-950">
+    <section id="modalidades" class="bg-stone-900 text-stone-100 py-24 md:py-32 border-t border-stone-950" aria-label="Plataformas de atendimento">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <div class="max-w-3xl mx-auto space-y-6 mb-16 reveal">
           <h2 class="text-xs font-bold tracking-widest uppercase text-stone-500">Praticidade &amp; Acessibilidade</h2>
@@ -696,30 +716,30 @@
         </div>
 
         <!-- Grelha de Plataformas -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16 reveal delay-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-16 reveal delay-100" role="list">
           <!-- Google Meet -->
-          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group" role="listitem">
             <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3" aria-hidden="true">
               <i class="bi bi-camera-video text-xl"></i>
             </div>
             <span class="text-sm font-light text-stone-300">Google Meet</span>
           </div>
           <!-- WhatsApp -->
-          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group" role="listitem">
             <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3" aria-hidden="true">
               <i class="bi bi-whatsapp text-xl"></i>
             </div>
             <span class="text-sm font-light text-stone-300">WhatsApp</span>
           </div>
           <!-- Zoom -->
-          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group" role="listitem">
             <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3" aria-hidden="true">
               <i class="bi bi-display text-xl"></i>
             </div>
             <span class="text-sm font-light text-stone-300">Zoom</span>
           </div>
           <!-- Discord -->
-          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group">
+          <div class="p-6 bg-stone-800/40 border border-stone-800 hover:border-stone-700 transition-all duration-300 flex flex-col items-center justify-center group" role="listitem">
             <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-stone-700 transition-all duration-300 mb-3" aria-hidden="true">
               <i class="bi bi-discord text-xl"></i>
             </div>
@@ -729,7 +749,7 @@
 
         <!-- CTA FORMATO BOTÃO ELEVADO E TÁTIL -->
         <div class="reveal delay-200">
-          <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-white text-stone-950 rounded-md text-sm font-semibold tracking-wider uppercase shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-300">
+          <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-white text-stone-950 rounded-md text-sm font-semibold tracking-wider uppercase shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-300" aria-label="Agendar meu Primeiro Encontro pelo WhatsApp com o psicólogo Bruno Camargo Manso">
             <i class="bi bi-calendar-check mr-2" aria-hidden="true"></i> Agendar Primeiro Encontro
           </a>
         </div>
@@ -747,8 +767,8 @@
       </div>
 
       <div class="flex space-x-6 text-sm">
-        <a href="https://wa.me/556298534925" target="_blank" class="hover:text-white transition-colors" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        <a href="mailto:psicologobrunomanso@gmail.com" class="hover:text-white transition-colors" title="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://wa.me/556298534925" target="_blank" class="hover:text-white transition-colors" title="WhatsApp" aria-label="Enviar mensagem no WhatsApp do psicólogo Bruno Camargo Manso"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:psicologobrunomanso@gmail.com" class="hover:text-white transition-colors" title="Email" aria-label="Enviar um e-mail para o psicólogo Bruno Camargo Manso"><i class="bi bi-envelope"></i></a>
       </div>
 
       <div class="text-center md:text-right text-[11px]">
@@ -761,7 +781,7 @@
   <!-- BOTÃO FLUTUANTE DE WHATSAPP (Acessível, limpo e de altíssima conversão) -->
   <a href="https://wa.me/556298534925" target="_blank" rel="noopener noreferrer" 
      class="whatsapp-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300"
-     aria-label="Falar com o psicólogo Bruno no WhatsApp" 
+     aria-label="Falar com o psicólogo Bruno Camargo Manso no WhatsApp" 
      title="Falar no WhatsApp">
     <i class="bi bi-whatsapp text-2xl" aria-hidden="true"></i>
   </a>
@@ -809,9 +829,11 @@
         if (isHidden) {
           toggleText.textContent = 'Ver menos especialidades';
           toggleIcon.classList.replace('bi-chevron-down', 'bi-chevron-up');
+          toggleBtn.setAttribute('aria-expanded', 'true');
         } else {
           toggleText.textContent = 'Ver todas as especialidades';
           toggleIcon.classList.replace('bi-chevron-up', 'bi-chevron-down');
+          toggleBtn.setAttribute('aria-expanded', 'false');
 
           // Retorna suavemente o utilizador para o topo da secção de Especialidades ao fechar
           document.getElementById('especialidades').scrollIntoView({ behavior: 'smooth' });
@@ -830,7 +852,9 @@
         document.querySelectorAll('.faq-content').forEach(otherContent => {
           if (otherContent !== content && otherContent.style.maxHeight !== '0px' && otherContent.style.maxHeight !== '') {
             otherContent.style.maxHeight = '0px';
-            otherContent.previousElementSibling.querySelector('i').classList.replace('bi-dash-lg', 'bi-plus-lg');
+            const otherBtn = otherContent.previousElementSibling;
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherBtn.querySelector('i').classList.replace('bi-dash-lg', 'bi-plus-lg');
           }
         });
 
@@ -838,9 +862,11 @@
         if (content.style.maxHeight && content.style.maxHeight !== '0px') {
           content.style.maxHeight = '0px';
           icon.classList.replace('bi-dash-lg', 'bi-plus-lg');
+          toggle.setAttribute('aria-expanded', 'false');
         } else {
           content.style.maxHeight = content.scrollHeight + 'px';
           icon.classList.replace('bi-plus-lg', 'bi-dash-lg');
+          toggle.setAttribute('aria-expanded', 'true');
         }
       });
     });
@@ -861,9 +887,11 @@
     function changeFontSize(size) {
       const htmlElement = document.documentElement;
       // Remove classes anteriores
-      htmlElement.classList.remove('font-size-lg', 'font-size-xl');
+      htmlElement.classList.remove('font-size-sm', 'font-size-lg', 'font-size-xl');
       
-      if (size === 'lg') {
+      if (size === 'sm') {
+        htmlElement.classList.add('font-size-sm');
+      } else if (size === 'lg') {
         htmlElement.classList.add('font-size-lg');
       } else if (size === 'xl') {
         htmlElement.classList.add('font-size-xl');
@@ -871,6 +899,157 @@
       
       // Salva a preferência de tamanho
       localStorage.setItem('fontSizePreference', size);
+    }
+
+    // --- GERENCIADOR DE NOTIFICAÇÃO DO SITE (TOAST CUSTOMIZADO) ---
+    function showToast(message) {
+      const toast = document.getElementById('accessibility-toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        
+        // Esconde o aviso depois de 4 segundos
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 4000);
+      }
+    }
+
+    // --- FERRAMENTA INTEGRADA DE LEITURA POR VOZ (TEXT-TO-SPEECH) ---
+    let speechSynth = window.speechSynthesis;
+    let isReading = false;
+    let textChunks = [];
+    let currentChunkIndex = 0;
+    let activeUtterance = null;
+
+    // Helper function to split text into safe-sized chunks at word boundaries (around 150 chars max)
+    function chunkText(text, maxLength) {
+      const words = text.split(' ');
+      const chunks = [];
+      let currentChunk = '';
+
+      words.forEach(word => {
+        if ((currentChunk + ' ' + word).length > maxLength) {
+          chunks.push(currentChunk.trim());
+          currentChunk = word;
+        } else {
+          currentChunk += (currentChunk ? ' ' : '') + word;
+        }
+      });
+
+      if (currentChunk) {
+        chunks.push(currentChunk.trim());
+      }
+
+      return chunks;
+    }
+
+    // Recursive speech player for queued chunks
+    function speakNextChunk(audioIcon, audioText) {
+      if (!isReading || currentChunkIndex >= textChunks.length) {
+        // Finished reading
+        isReading = false;
+        audioIcon.classList.replace('bi-stop-fill', 'bi-volume-up-fill');
+        audioText.textContent = 'Ouvir página';
+        return;
+      }
+
+      const chunkTextStr = textChunks[currentChunkIndex];
+      activeUtterance = new SpeechSynthesisUtterance(chunkTextStr);
+      
+      activeUtterance.lang = 'pt-PT'; // Sotaque português
+      activeUtterance.rate = 1.0; 
+      activeUtterance.pitch = 1.0;
+
+      // Assign Portuguese voice
+      const voices = speechSynth.getVoices();
+      const ptVoice = voices.find(voice => voice.lang.startsWith('pt'));
+      if (ptVoice) {
+        activeUtterance.voice = ptVoice;
+      }
+
+      activeUtterance.onend = () => {
+        currentChunkIndex++;
+        speakNextChunk(audioIcon, audioText);
+      };
+
+      activeUtterance.onerror = (event) => {
+        // Silences standard voluntary interrupts
+        if (event.error === 'interrupted' || event.error === 'canceled') {
+          return;
+        }
+        console.error("Erro na síntese de voz nativa: ", event.error);
+        showToast("A leitura foi pausada ou interrompida.");
+        isReading = false;
+        audioIcon.classList.replace('bi-stop-fill', 'bi-volume-up-fill');
+        audioText.textContent = 'Ouvir página';
+      };
+
+      speechSynth.speak(activeUtterance);
+    }
+
+    function toggleSpeech() {
+      const audioIcon = document.getElementById('audio-icon');
+      const audioText = document.getElementById('audio-text');
+
+      if (!speechSynth) {
+        showToast("O seu navegador não suporta leitura de texto por áudio de forma nativa.");
+        return;
+      }
+
+      if (isReading) {
+        // Stop speech immediately
+        speechSynth.cancel();
+        isReading = false;
+        audioIcon.classList.replace('bi-stop-fill', 'bi-volume-up-fill');
+        audioText.textContent = 'Ouvir página';
+      } else {
+        // 1. Force cancellation of any pending background speech queue
+        speechSynth.cancel();
+
+        // 2. Wait exactly 120ms to allow browser audio thread to flush before pushing new utterances
+        setTimeout(() => {
+          const mainContent = document.getElementById('conteudo-principal');
+          if (!mainContent) return;
+
+          // Select h1, h2, h3, h4, paragraphs, and visible images with an alt attribute
+          const textElements = mainContent.querySelectorAll('h1, h2, h3, h4, p, img[alt]');
+          let textToRead = "Iniciando a leitura da página de Bruno Camargo Manso. ";
+
+          textElements.forEach(element => {
+            if (element.offsetParent !== null) {
+              if (element.tagName.toLowerCase() === 'img') {
+                const altText = element.getAttribute('alt').trim();
+                if (altText.length > 0) {
+                  textToRead += "Descrição da imagem: " + altText + ". ";
+                }
+              } else {
+                const text = element.textContent.trim();
+                if (text.length > 0) {
+                  textToRead += text + ". ";
+                }
+              }
+            }
+          });
+
+          // Standardize text periods and spaces
+          textToRead = textToRead.replace(/\.+/g, '.').replace(/\s+/g, ' ');
+
+          // Generate safe text chunks to avoid web browser length limitations
+          textChunks = chunkText(textToRead, 150);
+          currentChunkIndex = 0;
+          isReading = true;
+
+          audioIcon.classList.replace('bi-volume-up-fill', 'bi-stop-fill');
+          audioText.textContent = 'Parar leitura';
+
+          // Begin reading the chunks
+          speakNextChunk(audioIcon, audioText);
+        }, 120);
+      }
     }
 
     // Carrega preferências salvas pelo usuário ao iniciar a página
@@ -893,6 +1072,21 @@
     window.addEventListener('DOMContentLoaded', () => {
       loadSavedAccessibilityPreferences();
       setTimeout(revealOnScroll, 100);
+      
+      // Carrega as vozes de forma assíncrona para navegadores modernos
+      if (speechSynth) {
+        speechSynth.getVoices();
+        if (speechSynth.onvoiceschanged !== undefined) {
+          speechSynth.onvoiceschanged = () => speechSynth.getVoices();
+        }
+      }
+    });
+
+    // Garante que o sintetizador é desligado se o usuário fechar a aba
+    window.addEventListener('beforeunload', () => {
+      if (speechSynth && isReading) {
+        speechSynth.cancel();
+      }
     });
   </script>
 
