@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <!-- SEO BÁSICO E PALAVRAS-CHAVE (Otimizado para o Google) -->
   <title>Bruno Camargo Manso — Psicólogo Clínico Online | Psicoterapia</title>
   <meta name="description" content="Psicoterapia online com o psicólogo clínico Bruno Camargo Manso (CRP 09/004628). Espaço seguro, calmo e acolhedor de orientação psicanalítica e existencial para adultos.">
@@ -28,9 +28,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <!-- Google Fonts para garantir que as fontes serifadas carreguem perfeitamente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -241,15 +241,21 @@
     <span id="toast-message" class="text-xs font-medium tracking-wide"></span>
   </div>
 
-  <!-- BARRA DE ACESSIBILIDADE E ATALHOS (No topo do site) -->
-  <div class="bg-stone-100 border-b border-stone-200 py-2 text-xs text-stone-600 transition-colors" role="region" aria-label="Opções de Acessibilidade">
-    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between flex-wrap gap-2">
-      <div class="flex items-center space-x-4">
-        <span class="font-medium"><i class="bi bi-eye mr-1" aria-hidden="true"></i> Opções visuais:</span>
-        <button onclick="toggleContrast()" id="btn-contrast-top" class="hover:underline focus:outline-2 focus:outline-stone-800 px-2 py-1 rounded flex items-center gap-1" title="Alternar Alto Contraste">
-          <i class="bi bi-circle-half" aria-hidden="true"></i> Alto Contraste
-        </button>
-        <div class="flex items-center space-x-1 border-l border-stone-300 pl-4">
+  <!-- BARRA DE ACESSIBILIDADE E ATALHOS - CORRIGIDA E ALINHADA PARA MOBILE -->
+  <div class="bg-stone-100 border-b border-stone-200 py-2.5 text-xs text-stone-600 transition-colors" role="region" aria-label="Opções de Acessibilidade">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      
+      <!-- Lado Esquerdo: Opções de Visualização e Ajustes de Texto -->
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-y-2.5 gap-x-4">
+        <!-- Rótulo + Botão Contraste -->
+        <div class="flex items-center space-x-2">
+          <span class="font-medium flex items-center"><i class="bi bi-eye mr-1" aria-hidden="true"></i> Opções visuais:</span>
+          <button onclick="toggleContrast()" id="btn-contrast-top" class="hover:underline focus:outline-2 focus:outline-stone-800 px-2 py-1 rounded flex items-center gap-1.5 text-[11px] sm:text-xs" title="Alternar Alto Contraste">
+            <i class="bi bi-circle-half" aria-hidden="true"></i> Alto Contraste
+          </button>
+        </div>
+        <!-- Ajustadores de tamanho de texto -->
+        <div class="flex items-center space-x-1 border-l border-stone-300 pl-3.5">
           <span class="mr-1">Texto:</span>
           <button onclick="changeFontSize('sm')" class="hover:bg-stone-200 px-2 py-0.5 font-bold rounded" title="Diminuir texto" aria-label="Diminuir tamanho do texto">A-</button>
           <button onclick="changeFontSize('md')" class="hover:bg-stone-200 px-2 py-0.5 font-bold rounded" title="Texto tamanho normal" aria-label="Tamanho de texto normal">A</button>
@@ -257,8 +263,8 @@
         </div>
       </div>
       
-      <!-- FERRAMENTA DE ÁUDIO READ-ALOUD (Ouvir o site) -->
-      <div class="flex items-center space-x-2">
+      <!-- Lado Direito: Ouvir página (Alinhado no centro em mobile / na direita em desktop) -->
+      <div class="flex items-center justify-center">
         <button onclick="toggleSpeech()" id="btn-audio-reading" class="hover:bg-stone-200 px-3 py-1 font-semibold rounded flex items-center gap-1.5 transition-colors" title="Ouvir conteúdo desta página" aria-label="Ouvir o conteúdo deste site em áudio">
           <i class="bi bi-volume-up-fill" id="audio-icon" aria-hidden="true"></i>
           <span id="audio-text">Ouvir página</span>
@@ -282,17 +288,15 @@
         <a href="#faq" class="hover:text-stone-900 transition-colors">Dúvidas</a>
         <a href="#modalidades" class="hover:text-stone-900 transition-colors">Consultas</a>
       </nav>
-
-      
     </div>
   </header>
 
-  <!-- PAINEL PRINCIPAL DE CONTEÚDO (Para leitores de tela) -->
+  <!-- PAINEL PRINCIPAL DE CONTEÚDO -->
   <main id="conteudo-principal">
 
     <!-- BLOCO 1: APRESENTAÇÃO HERO -->
     <section class="relative w-full overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-orange-50/40 border-b border-stone-200/40" aria-label="Introdução">
-      <!-- Elemento decorativo de luz e col no fundo -->
+      <!-- Elemento decorativo de luz no fundo -->
       <div class="absolute top-1/4 right-0 w-80 h-80 bg-orange-100/30 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
       <div class="absolute bottom-10 left-10 w-60 h-60 bg-stone-200/20 rounded-full blur-2xl -z-10" aria-hidden="true"></div>
 
@@ -317,10 +321,10 @@
           </div>
         </div>
 
-        <!-- Arte Fluida/Equilíbrio (Coluna Direita) -->
+        <!-- Imagem Artística Inspiradora (Coluna Direita) -->
         <div class="hidden md:block md:col-span-5 aspect-[4/5] relative overflow-hidden shadow-sm reveal group active">
           <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
-            <img src="assets/turner-ai.png" alt="Pintura artística inspirada nas obras do pintor William Turner: Um mar sereno envolto por falésias em tons terracota e um amanhecer dourado acolhedor no centro, representando o autoconhecimento." onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800';">
+            <img src="./assets/turner-ai.png" alt="Pintura artística inspirada nas obras do pintor William Turner: Um mar sereno envolto por falésias em tons terracota e um amanhecer dourado acolhedor no centro, representando o autoconhecimento." onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800';">
           </div>
         </div>
 
@@ -333,7 +337,7 @@
         <!-- FOTO PROFISSIONAL -->
         <div class="md:col-span-5 aspect-[4/5] bg-stone-200 border border-stone-300/60 relative overflow-hidden shadow-sm reveal group active">
           <div class="absolute inset-0 bg-stone-300/40 flex flex-col items-center justify-center p-6 text-center">
-            <img src="assets/aboutme.png" alt="Foto de Bruno Camargo Manso, psicólogo clínico, sentado sorrindo de forma acolhedora em sua sala de atendimento." onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800';">
+            <img src="./assets/aboutme.png" alt="Foto de Bruno Camargo Manso, psicólogo clínico, sentado sorrindo de forma acolhedora em sua sala de atendimento." onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800';">
           </div>
         </div>
 
@@ -778,11 +782,8 @@
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE DE WHATSAPP (Acessível, limpo e de altíssima conversão) -->
-  <a href="https://wa.me/556298534925" target="_blank" rel="noopener noreferrer" 
-     class="whatsapp-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300"
-     aria-label="Falar com o psicólogo Bruno Camargo Manso no WhatsApp" 
-     title="Falar no WhatsApp">
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
+  <a href="https://wa.me/556298534925" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" aria-label="Falar com o psicólogo Bruno Camargo Manso no WhatsApp" title="Falar no WhatsApp">
     <i class="bi bi-whatsapp text-2xl" aria-hidden="true"></i>
   </a>
 
@@ -977,7 +978,6 @@
       };
 
       activeUtterance.onerror = (event) => {
-        // Silences standard voluntary interrupts
         if (event.error === 'interrupted' || event.error === 'canceled') {
           return;
         }
@@ -1007,15 +1007,12 @@
         audioIcon.classList.replace('bi-stop-fill', 'bi-volume-up-fill');
         audioText.textContent = 'Ouvir página';
       } else {
-        // 1. Force cancellation of any pending background speech queue
         speechSynth.cancel();
 
-        // 2. Wait exactly 120ms to allow browser audio thread to flush before pushing new utterances
         setTimeout(() => {
           const mainContent = document.getElementById('conteudo-principal');
           if (!mainContent) return;
 
-          // Select h1, h2, h3, h4, paragraphs, and visible images with an alt attribute
           const textElements = mainContent.querySelectorAll('h1, h2, h3, h4, p, img[alt]');
           let textToRead = "Iniciando a leitura da página de Bruno Camargo Manso. ";
 
@@ -1035,10 +1032,8 @@
             }
           });
 
-          // Standardize text periods and spaces
           textToRead = textToRead.replace(/\.+/g, '.').replace(/\s+/g, ' ');
 
-          // Generate safe text chunks to avoid web browser length limitations
           textChunks = chunkText(textToRead, 150);
           currentChunkIndex = 0;
           isReading = true;
@@ -1046,7 +1041,6 @@
           audioIcon.classList.replace('bi-volume-up-fill', 'bi-stop-fill');
           audioText.textContent = 'Parar leitura';
 
-          // Begin reading the chunks
           speakNextChunk(audioIcon, audioText);
         }, 120);
       }
