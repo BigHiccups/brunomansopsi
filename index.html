@@ -23,6 +23,23 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+  <!-- Vercel Analytics Script -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Google Analytics (gtag.js) Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Configuração do ID de medição do Google Analytics
+    gtag('config', 'G-MEASUREMENT_ID');
+  </script>
+
   <!-- Tailwind CSS via CDN Oficial -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Bootstrap Icons via CDN Oficial -->
@@ -313,10 +330,10 @@
             Um convite à escuta atenta do sofrimento e das singularidades através de um percurso analítico e existencial adaptado à vida contemporânea.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white text-sm font-medium tracking-wider uppercase hover:bg-stone-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" aria-label="Iniciar Atendimento pelo WhatsApp com o psicólogo Bruno Camargo Manso">
+            <a href="https://wa.me/556298534925" target="_blank" data-cta="Hero - Iniciar Atendimento WhatsApp" class="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white text-sm font-medium tracking-wider uppercase hover:bg-stone-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5" aria-label="Iniciar Atendimento pelo WhatsApp com o psicólogo Bruno Camargo Manso">
               <i class="bi bi-whatsapp mr-2" aria-hidden="true"></i> Iniciar Atendimento
             </a>
-            <a href="#sobre" class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 bg-white/60 hover:bg-white text-sm font-medium tracking-wider uppercase transition-all duration-300" aria-label="Ir para a seção Sobre para conhecer mais sobre a prática terapêutica">
+            <a href="#sobre" data-cta="Hero - Saber mais sobre a prática" class="inline-flex items-center justify-center px-8 py-4 border border-stone-300 text-stone-700 bg-white/60 hover:bg-white text-sm font-medium tracking-wider uppercase transition-all duration-300" aria-label="Ir para a seção Sobre para conhecer mais sobre a prática terapêutica">
               Saber mais sobre a prática
             </a>
           </div>
@@ -542,7 +559,7 @@
 
         <!-- BOTÃO VER MAIS / VER MENOS -->
         <div class="text-center mt-12 reveal active">
-          <button id="toggle-specialties" class="inline-flex items-center justify-center px-8 py-3.5 border border-stone-800 text-stone-900 bg-transparent hover:bg-stone-900 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all duration-300" aria-expanded="false" aria-controls="specialties-grid">
+          <button id="toggle-specialties" data-cta="Especialidades - Ver Mais/Menos" class="inline-flex items-center justify-center px-8 py-3.5 border border-stone-800 text-stone-900 bg-transparent hover:bg-stone-900 hover:text-white text-xs font-semibold tracking-widest uppercase transition-all duration-300" aria-expanded="false" aria-controls="specialties-grid">
             <span id="toggle-text">Ver todas as especialidades</span>
             <i id="toggle-icon" class="bi bi-chevron-down ml-2" aria-hidden="true"></i>
           </button>
@@ -754,7 +771,7 @@
 
         <!-- CTA FORMATO BOTÃO ELEVADO E TÁTIL -->
         <div class="reveal delay-200">
-          <a href="https://wa.me/556298534925" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-white text-stone-950 rounded-md text-sm font-semibold tracking-wider uppercase shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-300" aria-label="Agendar meu Primeiro Encontro pelo WhatsApp com o psicólogo Bruno Camargo Manso">
+          <a href="https://wa.me/556298534925" target="_blank" data-cta="Consultas - Agendar Primeiro Encontro" class="inline-flex items-center justify-center px-10 py-5 bg-white text-stone-950 rounded-md text-sm font-semibold tracking-wider uppercase shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-300" aria-label="Agendar meu Primeiro Encontro pelo WhatsApp com o psicólogo Bruno Camargo Manso">
             <i class="bi bi-calendar-check mr-2" aria-hidden="true"></i> Agendar Primeiro Encontro
           </a>
         </div>
@@ -772,8 +789,9 @@
       </div>
 
       <div class="flex space-x-6 text-sm">
-        <a href="https://wa.me/556298534925" target="_blank" class="hover:text-white transition-colors" title="WhatsApp" aria-label="Enviar mensagem no WhatsApp do psicólogo Bruno Camargo Manso"><i class="bi bi-whatsapp"></i></a>
-        <a href="mailto:psicologobrunomanso@gmail.com" class="hover:text-white transition-colors" title="Email" aria-label="Enviar um e-mail para o psicólogo Bruno Camargo Manso"><i class="bi bi-envelope"></i></a>
+        <a href="https://wa.me/556298534925" target="_blank" data-cta="Footer - WhatsApp" class="hover:text-white transition-colors" title="WhatsApp" aria-label="Enviar mensagem no WhatsApp do psicólogo Bruno Camargo Manso"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/psicologobrunomanso/" target="_blank" rel="noopener noreferrer" data-cta="Footer - Instagram" class="hover:text-white transition-colors" title="Instagram" aria-label="Visitar o perfil do Instagram do psicólogo Bruno Camargo Manso"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:psicologobrunomanso@gmail.com" data-cta="Footer - Email" class="hover:text-white transition-colors" title="Email" aria-label="Enviar um e-mail para o psicólogo Bruno Camargo Manso"><i class="bi bi-envelope"></i></a>
       </div>
 
       <div class="text-center md:text-right text-[11px]">
@@ -784,10 +802,9 @@
   </footer>
 
   <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
-  <a href="https://wa.me/556298534925" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" aria-label="Falar com o psicólogo Bruno Camargo Manso no WhatsApp" title="Falar no WhatsApp">
+  <a href="https://wa.me/556298534925" target="_blank" rel="noopener noreferrer" data-cta="WhatsApp Flutuante" class="whatsapp-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" aria-label="Falar com o psicólogo Bruno Camargo Manso no WhatsApp" title="Falar no WhatsApp">
     <i class="bi bi-whatsapp text-2xl" aria-hidden="true"></i>
   </a>
-
 
   <!-- SCRIPT PARA EFEITOS DE REVELAÇÃO, ACORDEÃO E ACESSIBILIDADE -->
   <script>
@@ -1060,12 +1077,48 @@
       }
     }
 
+    // --- SISTEMA DE RASTREAMENTO DE EVENTOS DE CTA (ANALYTICS) ---
+    function trackCTAClick(ctaName, destinationUrl) {
+      // 1. Envia para o Google Analytics se disponível
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_click', {
+          'event_category': 'CTA',
+          'event_label': ctaName,
+          'destination': destinationUrl || window.location.href
+        });
+      }
+
+      // 2. Envia para o Vercel Analytics se disponível
+      if (typeof window.va === 'function') {
+        window.va('event', {
+          name: 'cta_click',
+          data: {
+            cta_name: ctaName,
+            destination: destinationUrl || ''
+          }
+        });
+      }
+    }
+
+    // Associa automaticamente a medição de clique a todos os elementos com o atributo 'data-cta'
+    function initCTATracking() {
+      const ctaElements = document.querySelectorAll('[data-cta]');
+      ctaElements.forEach(el => {
+        el.addEventListener('click', () => {
+          const ctaName = el.getAttribute('data-cta') || el.innerText.trim();
+          const destination = el.getAttribute('href') || '';
+          trackCTAClick(ctaName, destination);
+        });
+      });
+    }
+
     // Executa no scroll do ecrã
     window.addEventListener('scroll', revealOnScroll);
 
     // Executa as primeiras verificações após carregar a página completamente
     window.addEventListener('DOMContentLoaded', () => {
       loadSavedAccessibilityPreferences();
+      initCTATracking();
       setTimeout(revealOnScroll, 100);
       
       // Carrega as vozes de forma assíncrona para navegadores modernos
